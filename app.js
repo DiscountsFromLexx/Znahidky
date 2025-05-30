@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollTopBtn = document.querySelector('.scroll-top-btn');
 
     // Ваш токен бота (отриманий від @BotFather)
-    const botToken = '7670252979:AAFmEq21ALRVotLDkZj0S1665_PG_cmtbiQ'; // Замініть на ваш токен
+    const botToken = ''; // Замініть на ваш токен
     // Chat ID, куди надсилати повідомлення (група, канал або особистий чат)
     const chatId = '@znizjka'; // Замініть на ваш chat ID
 
