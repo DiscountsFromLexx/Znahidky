@@ -1,0 +1,272 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 100vh;   
+    
+}    
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .instruction-btn {
+            background-color: #fff;
+            color: #1E90FF;
+            padding: 10px 15px;
+            border: 1px solid #1E90FF;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        
+            position: fixed; /* Фіксує кнопку у вікні */
+            top: 15px; /* Відступ від верхнього краю */
+            right: 5px; /* Відступ від правого краю */
+            z-index: 1100; /* Забезпечує, щоб кнопка завжди була над іншими елементами */
+        }
+        
+        .instruction-img-link {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Центрує елемент */
+        }
+        
+        .instruction-img {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+        }   
+        .container {
+            margin-left: 0px;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            font-family: Helvetica, sans-serif;
+            font-weight:lighter;
+            width: 100%;
+            height: 900%;
+            background-color: rgb(224, 255, 255);
+            padding: 5px;
+            border-radius: 0px;
+            border: ;
+            font-size: 20px;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.0);
+            text-align: left;
+        }  
+        .header-text {
+            margin-top: 55px;
+            font-size: 20px;
+            font-weight:bold;
+            color: #696969;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+
+        .block-form {
+            margin-top: 2px;
+            margin-bottom: 5px;
+            padding: 5px;
+            height: 15%;
+            width: 95%;
+            text-align: left;
+            font-size: 20px;
+            font-weight:bold;        
+            color: #fff;
+            border-radius: 6px;
+            border: 1px solid #fff;
+        }
+        .input-group {
+            width: 100%;
+            margin-left: 5px;
+            
+            text-align: left;
+            font-size: 20px;            
+            color: #FF8C00;
+            
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            width: 90%;
+            background-color:;
+            font-color: #fff
+        }
+        .input-group input {
+            margin-left: 5px;
+            width: 90%;
+            height: 20%;
+            padding: 8px;
+            border: 1px solid #4682B4;
+            border-radius: 3px;
+            font-size: 14px;
+            background-color: #fff;
+            font-color: #4682B4
+            
+        }
+
+        .submit-group
+                    {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .submit-btn {
+            position: left
+            margin-top: 35px;
+            margin-left: 2px;
+            background: linear-gradient(to bottom, rgb(80, 150, 200), rgb(64, 122, 167)); /* Градієнт для об'єму */
+            color: #fff;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Легка тінь тексту */
+            
+            /* Тінь для об'ємного ефекту */
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 
+                        inset 1px 1px 2px rgba(255, 255, 255, 0.3); 
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(to bottom, rgb(100, 180, 230), rgb(80, 150, 200));
+            color: rgb(64, 122, 167);
+            border-color: rgb(64, 122, 167);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+                        inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .submit-btn:active {
+            /* Ефект натискання (кнопка трохи втиснута) */
+            box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to bottom, rgb(64, 122, 167), rgb(50, 100, 140));
+        }   
+        .clear-btn {
+            position: left
+            margin-top: 45px;
+            margin-left: 2px;
+            background: linear-gradient(to bottom, rgb(80, 150, 200), rgb(64, 122, 167)); /* Градієнт для об'єму */
+            color: #fff;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Легка тінь тексту */
+            
+            /* Тінь для об'ємного ефекту */
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 
+                        inset 1px 1px 2px rgba(255, 255, 255, 0.3); 
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .clear-btn:hover {
+            background: linear-gradient(to bottom, rgb(100, 180, 230), rgb(80, 150, 200));
+            color: rgb(64, 122, 167);
+            border-color: rgb(64, 122, 167);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+                        inset -1px -1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .clear-btn:active {
+            /* Ефект натискання (кнопка трохи втиснута) */
+            box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to bottom, rgb(64, 122, 167), rgb(50, 100, 140));
+        }
+        .channels-container {
+            display: block;
+            margin-top: 5px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 0px;
+            border:;
+            height: 80%;
+            width: 100%;
+            font-size: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .tgkch-text {
+            margin-top: 40px;
+            font-size: 18px;
+            font-weight:bold;
+            color: #FF8C00;
+            /* margin-bottom: left; */
+            text-align: left;
+        }
+        .channels-text {
+            margin-top: 0px;
+            font-size: 18px;
+            font-weight:lighter;
+            color: #000000;
+            /* margin-bottom: left; */
+            text-align: left;
+        }
+        .channels-text a {
+            color: #191970; /* Синій колір посилання */
+            text-decoration: none; /* Прибрати підкреслення */
+        }
+        
+        .channels-text a:hover {
+            text-decoration: underline; /* Підкреслення при наведенні */
+        }   
+        .container2 {
+            display: block;
+            margin-top: 150px;
+            background-color: #F5F5F5;
+            padding: 15px;
+            border-radius: 0px;
+            border:;
+            height: 110%;
+            width: 100%;
+            font-size: 20px;
+            box-shadow: 0 0 10px rgb(64, 122, 167);
+            text-align: left;
+        }          
+        .iheader-text {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight:;
+            color: #FF8C00;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .instructions-text {
+            margin-top: 0px;
+            font-size: 20px;
+            font-weight: lighter;
+            color: #4682B4;
+            margin-bottom: left;
+        }
+        
+        .scroll-top-btn {
+            margin-top: 20px;
+            margin-left: 20px;
+            display: none; /* Початково прихована */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FF7F50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .scroll-top-btn:hover {
+            background-color: #32C5B8;
+        }
