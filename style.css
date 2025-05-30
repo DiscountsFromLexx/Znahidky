@@ -11,6 +11,7 @@ body {
     background: linear-gradient(to bottom, #e0ffff, #ffffff);
     min-height: 100vh;
     font-family: Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent; /* Запобігає підсвітці при натисканні */
 }
 
 .main-container {
