@@ -35,15 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 
-    // Автоскрол до кнопки "Поділитись" при фокусі на інпут
-    document.querySelectorAll('input').forEach(input => {
-        input.addEventListener('focus', () => {
-            setTimeout(() => {
-                document.querySelector('.submit-btn').scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 300);
-        });
-    });
-
     // Закриття клавіатури при кліку поза полем
     document.addEventListener('click', (e) => {
         if (!e.target.matches('input')) {
