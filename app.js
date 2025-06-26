@@ -2,9 +2,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('telegramForm');
     const instructionBtn = document.querySelector('.instruction-btn');
     const scrollTopBtn = document.querySelector('.scroll-top-btn');
+    const themeToggle = document.getElementById('themeToggle');
 
-    // URL вашої Google Cloud Function
-    const cloudFunctionUrl = 'ВАШ_URL_CLOUD_FUNCTION'; // Замініть на URL вашої Cloud Function, наприклад, https://us-central1-your-project-id.cloudfunctions.net/znahidky
+    // URL вашого ngrok тунелю
+    const cloudFunctionUrl = 'https://b358-34-45-121-93.ngrok-free.app/submit'; // Замініть на актуальний ngrok URL
+
+    // Перемикання тем
+    themeToggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+        // Зберігаємо вибір теми в localStorage
+        localStorage.setItem('theme', themeToggle.checked ? 'light' : 'dark');
+    });
+
+    // Завантаження збереженої теми
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+        document.body.classList.remove('dark-theme');
+        document.body.classList.add('light-theme');
+        themeToggle.checked = true;
+    } else {
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
+        themeToggle.checked = false;
+    }
 
     // Прокрутка до інструкцій
     instructionBtn.addEventListener('click', () => {
