@@ -6,13 +6,19 @@
     <title>Telegram Mini App - Знахідки</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark-theme"> <!-- Додаємо клас за замовчуванням -->
     <div class="main-container">
         <div class="container">
+            <!-- Додаємо перемикач тем -->
+            <label class="theme-toggle">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
             <button type="button" class="instruction-btn">Інструкції</button>
             <a href="https://t.me/myznahidki" target="_blank" class="instruction-img-link">
                 <img src="https://raw.githubusercontent.com/DiscountsFromAli/X-CUBOT/main/images/znahidki.PNG" alt="Знахідки" class="instruction-img">
             </a>
+            <!-- Решта HTML без змін -->
             <div class="header-text">Ставайте співавтором каналу, діліться своїми знахідками!</div>
             <div class="block-form">
                 <form id="telegramForm">
@@ -42,7 +48,7 @@
                     </div>
                 </form>
             </div>
-
+            <!-- Решта HTML без змін -->
             <div class="channels-text">
                 <div class="tgkch-text">🔆 НАШІ ТЕЛЕГРАМ КАНАЛИ</div>
                 <p>
@@ -59,7 +65,6 @@
                 </p>
                 <p>シ Ми працюємо для вас та завдяки вам!♥️</p>
             </div>
-
             <div class="iheader-text" id="instructions">Інструкції</div>
             <div class="instructions-text">
                 <p>✅ У полі "Ціна" вказуйте ціну та валюту.</p>
