@@ -8,12 +8,213 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #e0ffff, #ffffff);
     min-height: 100vh;
     font-family: Helvetica, Arial, sans-serif;
-    -webkit-tap-highlight-color: transparent; /* Запобігає підсвітці при натисканні */
+    -webkit-tap-highlight-color: transparent;
 }
 
+/* Темний режим (поточний стиль) */
+body.dark-theme {
+    background: linear-gradient(to bottom, #e0ffff, #ffffff);
+}
+
+body.dark-theme .container {
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .instruction-btn {
+    background: #ffffff;
+    color: #1E90FF;
+    border: 2px solid #1E90FF;
+}
+
+body.dark-theme .instruction-btn:hover {
+    background: #1E90FF;
+    color: #ffffff;
+}
+
+body.dark-theme .header-text {
+    color: #333;
+}
+
+body.dark-theme .input-group label {
+    color: #FF8C00;
+}
+
+body.dark-theme .input-group input {
+    border: 1px solid #4682B4;
+    background: #f9f9f9;
+}
+
+body.dark-theme .input-group input:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
+}
+
+body.dark-theme .submit-btn, body.dark-theme .clear-btn {
+    background: linear-gradient(to bottom, #1E90FF, #4682B4);
+}
+
+body.dark-theme .submit-btn:hover, body.dark-theme .clear-btn:hover {
+    background: linear-gradient(to bottom, #4682B4, #1E90FF);
+}
+
+body.dark-theme .channels-text {
+    color: #333;
+}
+
+body.dark-theme .tgkch-text {
+    color: #FF8C00;
+}
+
+body.dark-theme .iheader-text {
+    color: #FF8C00;
+}
+
+body.dark-theme .instructions-text {
+    color: #4682B4;
+}
+
+/* Світлий режим (на основі наданого коду) */
+body.light-theme {
+    background: transparent;
+}
+
+body.light-theme .container {
+    background: #B0E0E6;
+}
+
+body.light-theme .instruction-btn {
+    background: transparent;
+    color: #4682B4;
+    border: 1px solid #000080;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+body.light-theme .instruction-btn:hover {
+    background: #1E90FF;
+    color: #ffffff;
+}
+
+body.light-theme .header-text {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+body.light-theme .input-group label {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+body.light-theme .input-group input {
+    border: 0px solid #000080;
+    background: #F5F5F5;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+body.light-theme .input-group input:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
+}
+
+body.light-theme .submit-btn, body.light-theme .clear-btn {
+    background: #4682B4;
+    border: 1px solid #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+}
+
+body.light-theme .submit-btn:hover, body.light-theme .clear-btn:hover {
+    background: linear-gradient(to bottom, #4682B4, #1E90FF);
+}
+
+body.light-theme .channels-text {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+body.light-theme .tgkch-text {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+body.light-theme .iheader-text {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.light-theme .instructions-text {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+body.light-theme .instructions-text a {
+    color: #00BFFF;
+}
+
+body.light-theme .instructions-text a:hover {
+    color: #B2EBF2;
+}
+
+/* Стилі для перемикача тем */
+.theme-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    z-index: 1000;
+}
+
+.theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #1E90FF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Решта стилів без змін */
 .main-container {
     display: flex;
     flex-direction: column;
@@ -25,32 +226,9 @@ body {
 
 .container {
     width: 100%;
-    background: #fff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-.instruction-btn {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background: #ffffff;
-    color: #1E90FF;
-    border: 2px solid #1E90FF;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
-
-.instruction-btn:hover {
-    background: #1E90FF;
-    color: #ffffff;
 }
 
 .instruction-img-link {
@@ -61,14 +239,6 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 10px;
-}
-
-.header-text {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
 }
 
 .block-form {
@@ -85,24 +255,15 @@ body {
     display: block;
     font-size: 16px;
     font-weight: 600;
-    color: #FF8C00;
     margin-bottom: 5px;
 }
 
 .input-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #4682B4;
     border-radius: 6px;
     font-size: 30px;
-    background: #f9f9f9;
     transition: border-color 0.3s ease;
-}
-
-.input-group input:focus {
-    outline: none;
-    border-color: #1E90FF;
-    box-shadow: 0 0 5px rgba(30, 144, 255, 0.3);
 }
 
 .submit-group {
@@ -113,8 +274,6 @@ body {
 }
 
 .submit-btn, .clear-btn {
-    background: linear-gradient(to bottom, #1E90FF, #4682B4);
-    color: #fff;
     padding: 12px;
     border: none;
     border-radius: 8px;
@@ -126,7 +285,6 @@ body {
 }
 
 .submit-btn:hover, .clear-btn:hover {
-    background: linear-gradient(to bottom, #4682B4, #1E90FF);
     transform: translateY(-2px);
 }
 
@@ -138,14 +296,12 @@ body {
 .channels-text {
     margin-top: 30px;
     font-size: 16px;
-    color: #333;
     text-align: left;
 }
 
 .tgkch-text {
     font-size: 18px;
     font-weight: bold;
-    color: #FF8C00;
     margin-bottom: 10px;
 }
 
@@ -162,14 +318,12 @@ body {
     margin-top: 40px;
     font-size: 22px;
     font-weight: bold;
-    color: #FF8C00;
     text-align: left;
 }
 
 .instructions-text {
     margin-top: 10px;
     font-size: 16px;
-    color: #4682B4;
     text-align: left;
     line-height: 1.5;
 }
@@ -205,6 +359,10 @@ body {
         right: 10px;
         padding: 8px 15px;
         font-size: 14px;
+    }
+    .theme-toggle {
+        top: 10px;
+        left: 10px;
     }
     .header-text {
         font-size: 18px;
